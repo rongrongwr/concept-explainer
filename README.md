@@ -24,7 +24,14 @@
 
 ## 安装
 
-在 Claude Code、Codex、OpenCode、OpenClaw 等支持 Skill 的 Agent 里，直接说：
+**方式一：直接安装（推荐）**
+
+在支持的 Agent 中说：
+```
+帮我安装这个 skill：concept-explainer
+```
+
+**方式二：指定 GitHub 仓库**
 
 ```
 帮我安装这个 skill：https://github.com/<your-username>/concept-explainer
