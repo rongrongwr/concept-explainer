@@ -7,6 +7,7 @@ description: |
   触发词包括但不限于：帮我了解XX、XX是什么、解释一下XX、搞懂XX、XX是怎么回事、XX的原理、通俗易懂地解释XX。
   即使用户说"研究一下XX"，如果上下文显示只是想理解概念而非深度调研，也应触发本skill。
   不适用于需要横纵分析的深度研究（用hv-analysis）、公众号写作（用khazix-writer）、或简单的一句名词解释。
+platforms: [claude-code, codex, opencode, openclaw, alice]
 ---
 
 # 概念解释 Skill
@@ -52,6 +53,19 @@ description: |
 ---
 
 ## 第二步：权威信息收集（确保准确性）
+
+### 各平台工具映射
+
+不同 Agent 平台的工具有所不同，执行时根据当前运行平台选择对应的工具：
+
+| 功能 | Claude Code / Codex | Alice（白艾莉） |
+|------|---------------------|-----------------|
+| 搜索 | `WebSearch` | `guanlan_search`（中文优先）/ `web_search`（英文） |
+| 网页读取 | `WebFetch` / `web-access` | `guanlan_read`（中文增强）/ `web_fetch`（通用） |
+| 深度调研 | 自行执行 | 可调用 `agent` 工具（role="researcher"）派调研员 |
+| PDF 生成 | `md_to_pdf.py` | `pdf_create` 工具或继续用脚本 |
+
+**平台检测**：执行前先检测当前可用工具，选择最适合的方式完成任务。
 
 ### 核心原则：一手信息优于二手信息
 
