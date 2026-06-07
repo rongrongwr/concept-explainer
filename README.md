@@ -16,12 +16,6 @@
 - XX是怎么回事、XX的原理、通俗易懂地解释XX
 - 即使用户说"研究一下XX"，如果上下文显示只是想理解概念而非深度调研，也应触发
 
-## 不适用场景
-
-- 需要横纵分析的深度研究 → 用 [hv-analysis](https://github.com/KKKKhazix/khazix-skills/tree/main/hv-analysis)
-- 公众号写作 → 用 [khazix-writer](https://github.com/KKKKhazix/khazix-skills/tree/main/khazix-writer)
-- 简单的一句名词解释 → 直接回答即可
-
 ## 安装
 
 **方式一：直接安装（推荐）**
